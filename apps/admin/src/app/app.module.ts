@@ -1,9 +1,9 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { UiModule } from '@soretrak-platform/ui';
-import { RouterModule } from '@angular/router';
-
-import { AppComponent } from './app.component';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { UiModule } from "@soretrak-platform/ui";
+import { RouterModule } from "@angular/router";
+//
+import { AppComponent } from "./app.component";
 
 @NgModule({
   declarations: [AppComponent],
@@ -12,16 +12,16 @@ import { AppComponent } from './app.component';
     UiModule,
     RouterModule.forRoot([
       {
-        path: '',
+        path: "",
         loadChildren: () =>
-          import('@soretrak-platform/feature-main').then(
+          import("@soretrak-platform/feature-main").then(
             (module) => module.FeatureMainModule
           ),
       },
       {
-        path: 'about',
+        path: "about",
         loadChildren: () =>
-          import('@soretrak-platform/feature-about').then(
+          import("@soretrak-platform/feature-about").then(
             (module) => module.FeatureAboutModule
           ),
       },
